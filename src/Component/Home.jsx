@@ -21,7 +21,7 @@ const Home = () => {
       {/* Main Heading */}
       <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-center leading-snug mb-6 px-2">
         India's Top Rated Professional <br className="hidden sm:block" />
-        Services Platform
+        Services <spam className=" text-blue-500">Platform</spam>
       </h1>
 
       {/* Search Bar */}
@@ -38,7 +38,7 @@ const Home = () => {
 
       {/* Popular Searches */}
       <div className="text-center w-full max-w-3xl">
-        <p className="text-xs sm:text-sm text-gray-300 mb-4">Popular Searches</p>
+        <p className="text-xs sm:text-sm text-blue-400 mb-4">Popular Searches</p>
         <div className="flex flex-wrap justify-center gap-3">
           {[
             { label: 'NGO Registration', color: 'bg-white' },

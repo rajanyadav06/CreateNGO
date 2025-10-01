@@ -122,7 +122,7 @@ const Contact = () => {
           </button>
         </form>
       </div>
-      <div className="mt-10">
+      <div className="mt-6 w-3.5/4 mx-auto h-96 rounded-lg overflow-hidden shadow-lg">
         <MapComponent />
         </div>
     </div>

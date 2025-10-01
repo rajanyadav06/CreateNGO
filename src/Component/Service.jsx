@@ -65,7 +65,7 @@ const Service = () => {
             Discover Our Digital Services
           </h1>
           <p className="mt-4 text-lg text-gray-600 max-w-4xl text-center mx-auto">
-            Scale your business effortlessly while staying compliant with TrueX. From incorporation to payroll, we
+            Scale your business effortlessly while staying compliant with Create<spam className="text-amber-400 font-bold">NGO</spam>. From incorporation to payroll, we
             offer a wide range of top-tier business services—delivered seamlessly through our intuitive online
             platform. Partner with us for efficiency, accuracy, and growth!
           </p>

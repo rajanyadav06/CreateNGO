@@ -1,6 +1,7 @@
 import React from "react";
 import { FaLinkedin, FaYoutube, FaTelegramPlane } from "react-icons/fa";
 import { MdLocationOn, MdEmail } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -35,9 +36,9 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-3 border-b border-pink-400 inline-block pb-1">
               Company
             </h4>
-            <ul className="space-y-2 text-sm text-gray-300">
+            <ul className="space-y-2 text-sm text-gray-300 flex flex-col">
               <li>About CreateNGO</li>
-              <li>Contact</li>
+              <Link to="contact-us" className="hover:text-blue-400 transition">Contact</Link>
               <li>FAQs</li>
               <li>Blog</li>
             </ul>
@@ -48,11 +49,11 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-3 border-b border-pink-400 inline-block pb-1">
               Service
             </h4>
-            <ul className="space-y-2 text-sm text-gray-300">
-              <li> NGO Registration</li>
-              <li>Trust</li>
-              <li>SECTION 8</li>
-              <li>GST Registration</li>
+            <ul className="space-y-2 text-sm text-gray-300 flex flex-col ">
+              <Link to="ngo-registion" className=" hover:text-blue-400 transition"> NGO Registration</Link>
+              <Link to="trust" className=" hover:text-blue-400 transition">Trust</Link>
+              <Link to="section" className=" hover:text-blue-400 transition">SECTION 8</Link>
+              <Link to="gst-registion" className=" hover:text-blue-400 transition">GST Registration</Link>
             </ul>
           </div>
 
