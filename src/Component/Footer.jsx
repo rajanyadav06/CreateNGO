@@ -1,101 +1,97 @@
-import React from 'react';
-
-const footerData = [
-  {
-    title: "START AN NGO",
-    links: [
-      "NGO Registration",
-      "12A & 80G Registration",
-      "FCRA Registration",
-      "Niti Aayog"
-    ]
-  },
-  {
-    title: "NGO COMPLIANCE",
-    links: [
-      "Accounting",
-      "Annual Report",
-      "Income Tax Return",
-      "Change in An NGO"
-    ]
-  },
-  {
-    title: "START A BUSINESS",
-    links: [
-      "Private Limited Company",
-      "Limited Liability Partnership",
-      "One Person Company",
-      "Partnership Firm"
-    ]
-  }
-];
-
-// Reusable component for the link columns
-const FooterColumn = ({ title, links }) => (
-  <div className="mb-8 lg:mb-0">
-    <h3 className="mb-4 text-sm font-semibold tracking-wider text-blue-500 uppercase border-b-2 border-blue-500 pb-1 w-fit">
-      {title}
-    </h3>
-    <ul className="space-y-2">
-      {links.map((link, index) => (
-        <li key={index}>
-          {/* Link is white, hovers with a blue underline/text for interaction */}
-          <a 
-            href="#" 
-            className="text-gray-300 transition duration-150 ease-in-out hover:text-blue-400 text-base"
-            onClick={(e) => e.preventDefault()} // Prevent actual navigation for this example
-          >
-            {link}
-          </a>
-        </li>
-      ))}
-    </ul>
-  </div>
-);
+import React from "react";
+import { FaLinkedin, FaYoutube, FaTelegramPlane } from "react-icons/fa";
+import { MdLocationOn, MdEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
-    // Main Footer Container: Black background, padding
-    <footer className="bg-black text-white px-4 py-16">
-      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row lg:justify-between">
-        
-        {/* Left Section: Trust Message & Google Reviews */}
-        <div className="w-full lg:w-1/3 mb-10 lg:mb-0 pr-8">
-          <h2 className="text-3xl md:text-4xl font-extrabold leading-snug">
-            The Most Trusted Business Registration Professionals
-          </h2>
-          
-          {/* Google Reviews Placeholder */}
-          <div className="mt-8">
-            <p className="text-xl font-bold">Google</p>
-            {/* Stars Placeholder: Replicating the yellow star rating */}
-            <div className="text-yellow-500 text-2xl" role="img" aria-label="5 star rating">
-              ★★★★★
+    <footer className="bg-[#0e0b12] text-white pt-12 pb-4 px-6 lg:px-20">
+      <div className="max-w-7xl mx-auto">
+        {/* Tagline */}
+        <h2 className="text-2xl md:text-3xl font-semibold leading-snug mb-6">
+           The Most  Business Professionals{" "}
+          <span className="text-yellow-400">Trusted</span> and{" "}
+          <span className="text-sky-400">Registration</span>.
+        </h2>
+
+        {/* Main Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 border-b border-gray-700 pb-10">
+          {/* Contact */}
+          <div>
+            <h1 className="text-2xl font-bold mb-4">Create<span className=" text-amber-300">NGO</span></h1>
+              
+            <p>Contact Us: +91 93117 33380</p>
+            <p className="mt-1 text-sm">
+              Address -A-88 Sector 4 noida 201301 Uttar Pradesh India
+            </p>
+            <div className="flex items-center gap-2 mt-2">
+              <MdEmail className="text-xl" />
+              <p className="text-sm">support@thecreatengo.com</p>
             </div>
-            <p className="text-gray-400 mt-1">Reviews</p>
+    
+          </div>
+
+          {/* Company */}
+          <div>
+            <h4 className="text-lg font-semibold mb-3 border-b border-pink-400 inline-block pb-1">
+              Company
+            </h4>
+            <ul className="space-y-2 text-sm text-gray-300">
+              <li>About CreateNGO</li>
+              <li>Contact</li>
+              <li>FAQs</li>
+              <li>Blog</li>
+            </ul>
+          </div>
+
+          {/* Categories */}
+          <div>
+            <h4 className="text-lg font-semibold mb-3 border-b border-pink-400 inline-block pb-1">
+              Service
+            </h4>
+            <ul className="space-y-2 text-sm text-gray-300">
+              <li> NGO Registration</li>
+              <li>Trust</li>
+              <li>SECTION 8</li>
+              <li>GST Registration</li>
+            </ul>
+          </div>
+
+          {/* Social */}
+          <div>
+            <h4 className="text-lg font-semibold mb-3 border-b border-pink-400 inline-block pb-1">
+              Follow Us
+            </h4>
+            <div className="space-y-3">
+              <div className="flex items-center gap-2">
+                <FaLinkedin className="text-xl" />
+                <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+                  LinkedIn
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaYoutube className="text-xl" />
+                <a href="https://youtube.com" target="_blank" rel="noreferrer">
+                  YouTube
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaTelegramPlane className="text-xl" />
+                <a href="https://t.me" target="_blank" rel="noreferrer">
+                  Telegram
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-        
-        {/* Right Section: Link Columns */}
-        <div className="w-full lg:w-2/3 grid grid-cols-2 md:grid-cols-3 gap-8">
-          {footerData.map((section, index) => (
-            <FooterColumn 
-              key={index}
-              title={section.title}
-              links={section.links}
-            />
-          ))}
-        </div>
-      </div>
 
-      {/* Button Section (Full Width, centered) */}
-      <div className="max-w-6xl mx-auto mt-12 pt-8 text-center">
-        <button 
-          className="px-8 py-3 text-lg font-medium text-white bg-blue-500 rounded-md shadow-lg hover:bg-blue-600 transition duration-300"
-          onClick={() => console.log("Clicked 'See all the services'")}
-        >
-          See all the services
-        </button>
+        {/* Bottom bar */}
+        <div className="flex flex-col md:flex-row justify-between items-center mt-6 text-sm text-gray-400">
+          <p>© 2025 Rajan Yadav. All rights reserved.</p>
+          <div className="flex gap-4 mt-2 md:mt-0">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+          </div>
+        </div>
       </div>
     </footer>
   );
