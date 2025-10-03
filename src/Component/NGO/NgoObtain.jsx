@@ -49,7 +49,7 @@ const OrganizationCard = ({ name, image, hoverText }) => {
       />
 
       {/* Hover Overlay - Shows dark background and hoverText */}
-      <div className="absolute inset-0 bg-opacity-0 group-hover:bg-opacity-70 transition-opacity duration-300 flex items-end p-6 z-10">
+      <div className="absolute inset-0  bg-opacity-0 group-hover:bg-opacity-70 transition-opacity duration-300 flex items-end p-6 z-10">
         <p className="text-white text-lg font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           {hoverText}
         </p>
