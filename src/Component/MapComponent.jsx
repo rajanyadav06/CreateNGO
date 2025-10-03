@@ -2,7 +2,7 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
 const MapComponent = () => {
-    const position = [28.5893577,77.3120101]; // Loaction 91Springboard Sector 1, Noida
+    const position = [28.5315,77.4246]; // Loaction A-88 Sector 4 noida 
 
     return (
         <div className="w-full flex justify-center items-center">    
